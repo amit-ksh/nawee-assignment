@@ -37,7 +37,7 @@ const requiredFormInputs = [
   },
 ]
 
-const ComplainForm = () => {
+const ComplainForm = ({ user }) => {
   return (
     <div className='my-4 px-4 py-2'>
 
@@ -68,7 +68,10 @@ const ComplainForm = () => {
             }
           </div>
 
-          <div>
+          {
+            user !== 'guest' && 
+            (
+              <div>
             {/* REQUIRED INFOMATION FORM INPUT */}
             <div>
               <div className='my-5'>
@@ -112,8 +115,11 @@ const ComplainForm = () => {
                   />
                 </div>
             </div>
-          </div>
+              </div>
+            )
+          }
         </div>
+        
         {/* SUBMIT and BACK Button */}
         <div className='mt-[80px]'>
           <div className="flex justify-center align-middle">
