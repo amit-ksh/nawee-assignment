@@ -35,7 +35,7 @@ const Header = () => {
                   <Link
                     to={link.url}
                     className={
-                      `block py-2 pr-4 pl-3 text-black rounded hover:text-[#fa89328a] 
+                      `mt-[-6px] block py-2 pr-4 pl-3 rounded hover:text-[#fa89328a] 
                       ${location.pathname === link.url && 'text-[#FA8832]'}`
                     }
                   >
@@ -49,7 +49,7 @@ const Header = () => {
               <button
                 className="
                   block ml-2 md:mt-[-4px] mt-1 text-md border border-1px border-[#FF8233]
-                  text-[#FA8832] rounded md:bg-transparent uppercase p-1 tracking-wider
+                  text-[#FA8832] rounded md:bg-transparent uppercase p-1 px-2 tracking-wider
                   hover:bg-[#FA8832] hover:text-white"
               >
                 Download

@@ -1,8 +1,9 @@
 import React from 'react'
+import ComplainForm from './ComplainForm'
 
 const userTypes = ['Guest', 'Customers', 'Agent', 'Booth']
 
-const MainLayout = ({children}) => {
+const MainLayout = () => {
 
   return (
     <div className='px-4 py-2'>
@@ -22,8 +23,8 @@ const MainLayout = ({children}) => {
         ))}
       </div>
 
-      <div>
-        { children }
+      <div className='mb-[20vh]'>
+        <ComplainForm />
       </div>
     </div>
   )
