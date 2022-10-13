@@ -12,7 +12,7 @@ const Header = () => {
   const location = useLocation()
 
   return (  
-    <nav className="bg-white px-4 py-2">
+    <nav className="px-4 py-2">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <a href="https://flowbite.com/" className="flex items-center">
             <span className="self-center text-xl font-semibold whitespace-nowrap text-black">NaWee</span>
@@ -27,7 +27,7 @@ const Header = () => {
           <svg className="w-6 h-6" aria-hidden="true" fill="#FA8832" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
         </button>
 
-        <div className={`w-full md:block md:w-auto bg-gray-100 md:bg-white rounded-md ${toggleNav && "hidden"}`} id="navbar-default">
+        <div className={`w-full md:block md:w-auto bg-gray-100 rounded-md ${toggleNav && "hidden"}`} id="navbar-default">
           <ul className="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 text-md">
             {
               links.map(link => (
@@ -35,8 +35,8 @@ const Header = () => {
                   <Link
                     to={link.url}
                     className={
-                      `block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0
-                      hover:text-[#fa89328a] ${location.pathname === link.url && 'text-[#FA8832]'}`
+                      `block py-2 pr-4 pl-3 text-black rounded hover:text-[#fa89328a] 
+                      ${location.pathname === link.url && 'text-[#FA8832]'}`
                     }
                   >
                     {link.name}
@@ -47,7 +47,8 @@ const Header = () => {
 
             <li>
               <button
-                className="block ml-2 md:mt-[-4px] mt-1 text-md btn-border
+                className="
+                  block ml-2 md:mt-[-4px] mt-1 text-md border border-1px border-[#FF8233]
                   text-[#FA8832] rounded md:bg-transparent uppercase p-1 tracking-wider
                   hover:bg-[#FA8832] hover:text-white"
               >
