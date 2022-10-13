@@ -87,7 +87,7 @@ const ComplainForm = ({ user }) => {
           </div>
 
           {
-            user !== 'guest' && 
+            !user && user !== 'guest' && 
             (
               <div>
             {/* REQUIRED INFOMATION FORM INPUT */}

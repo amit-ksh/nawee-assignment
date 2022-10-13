@@ -14,7 +14,7 @@ const Header = () => {
   return (  
     <nav className="px-4 py-2">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="https://flowbite.com/" className="flex items-center">
+        <a href="/" className="flex items-center">
             <span className="self-center text-xl font-semibold whitespace-nowrap text-black">NaWee</span>
         </a>
 
@@ -36,7 +36,7 @@ const Header = () => {
                     to={link.url}
                     className={
                       `mt-[-6px] block py-2 pr-4 pl-3 rounded hover:text-[#fa89328a] 
-                      ${location.pathname === link.url && 'text-[#FA8832]'}`
+                      ${location.pathname.slice(0, location.pathname.lastIndexOf('/')) === link.url && 'text-[#FA8832]'}`
                     }
                   >
                     {link.name}
