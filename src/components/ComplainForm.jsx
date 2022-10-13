@@ -37,6 +37,24 @@ const requiredFormInputs = [
   },
 ]
 
+const contacts = [
+  {
+    heading: "Call Us",
+    p: "Call us 8 a.m. - 7 p.m.  ",
+    value: "+234 76875897"
+  },
+  {
+    heading: "Chat with us",
+    p: "Anytime, We will respond during business hours",
+    value: "+234 76875897"
+  },
+  {
+    heading: "Mail Us",
+    p: "Anytime, We will respond during business hours",
+    value: "nawee@gmail.com"
+  },
+]
+
 const ComplainForm = ({ user }) => {
   return (
     <div className='my-4 px-4 py-2'>
@@ -118,6 +136,20 @@ const ComplainForm = ({ user }) => {
               </div>
             )
           }
+        </div>
+
+        <div className='my-5'>
+          <h3 className='text-2xl text-[#424242] font-semibold'>Choose</h3>
+          
+          <div className="contacts mt-5 grid grid-cols-3 gap-4">
+            {contacts.map((contact, idx) => (
+              <div key={idx} className="col-span-1 text-center p-2 bg-white rounded-lg">
+                <h6 className='text-lg font-semibold'>{contact.heading}</h6>
+                <p className='text-[#424242] text-xs'>{contact.p}</p>
+                <p className='text-[#FF8832] mt-2'>{ contact.value }</p>
+              </div>
+            ))}
+          </div>
         </div>
         
         {/* SUBMIT and BACK Button */}
